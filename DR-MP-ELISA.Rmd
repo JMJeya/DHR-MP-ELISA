@@ -1,0 +1,111 @@
+---
+title: "MP ELISA ANALYSIS"
+output: html_notebook
+---
+
+```{r}
+library("tidyverse")
+library("ggplot2")
+```
+
+```{r}
+CD_full <- read.csv("./MP_CLINICAL\ DATA.csv", header = TRUE, stringsAsFactors = FALSE)
+CD_full
+
+dir()
+a2m <- read.csv("./A2M.csv", stringsAsFactors = FALSE)
+colnames(a2m) <- c("S.ID", "Category", "A2M_ng.ml.sMP")
+a2m$Category <- as.factor(a2m$Category)
+a2m
+
+
+cd41 <- read.csv("./CD41-61.csv", stringsAsFactors = FALSE)
+colnames(cd41) <- c("Category", "S.ID", "CD41_ng.ml.sMP")
+cd41$Category <- as.factor(cd41$Category)
+cd41$CD41_ng.ml.sMP <- round(cd41$CD41_ng.ml.sMP, digits = 2)
+cd41
+
+fn <- read.csv("./FN.csv", stringsAsFactors = FALSE)
+colnames(fn) <- c("Category", "S.ID", "FN_ng.ml.sMP")
+fn$Category <- as.factor(fn$Category)
+fn$FN_ng.ml.sMP <- round(fn$FN_ng.ml.sMP, digits = 2)
+fn
+```
+
+```{r}
+CD <- CD_full[ ,c(1:2, 24:25, 29:30, 39:40, 55:70)]
+colnames(CD)[c(1:2, 6:24)] <- c("S.ID", "Category", "BP", "diabDuration", "diabTreatment", "HbA1c", "ESR", "Hb_gm.dl", "Glucose_mg.dl", "R.F.PP", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l" )
+colnames(CD)
+CD_full
+CD
+CD$Category <- as.factor(CD$Category)
+CD$Sex <- as.factor(CD$Sex)
+unique(CD$diabTreatment)
+```
+
+
+```{r}
+CD <- CD %>%
+      mutate(diabDuration = str_replace_all(diabDuration, c("No"="0", "Yrs" = ""))) %>%
+      mutate(diabDuration = as.integer(diabDuration)) %>%
+```
+
+```{r}
+# Combine A2M values with clinical data
+a2m.cd <- left_join(CD, 
+                    a2m %>% dplyr::select(S.ID, A2M_ng.ml.sMP), 
+                    by = "S.ID")
+a2m
+a2m.cd
+
+# Combine CD41-61 values with clinical data
+cd41.cd <- left_join(CD, 
+                    cd41 %>% dplyr::select(S.ID, CD41_ng.ml.sMP), 
+                    by = "S.ID")
+cd41
+cd41.cd
+
+# Combine FN values with clinical data
+fn.cd <- left_join(CD, 
+                   fn %>% select(S.ID, FN_ng.ml.sMP), 
+                   by = "S.ID")
+fn
+fn.cd
+
+# Combine A2M, CD41-61, FN values with clinical data
+CD_ACF <- CD %>%
+          full_join(a2m, by = "S.ID") %>%
+          full_join(cd41, by = "S.ID") %>%
+          full_join(fn, by = "S.ID") %>%
+          select(-c("Category.y", "Category.x.x","Category.y.y"))
+
+colnames(CD_ACF) 
+write.csv(CD_ACF, "CD_ACF_all.csv")
+
+CD_ACF_com <- CD %>%
+          inner_join(a2m, by = "S.ID") %>%
+          inner_join(cd41, by = "S.ID") %>%
+          inner_join(fn, by = "S.ID") %>%
+          select(-c("Category.y", "Category.x.x","Category.y.y"))
+
+colnames(CD_ACF_com)
+write.csv(CD_ACF_com, "CD_ACF_com.csv")
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
