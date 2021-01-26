@@ -48,6 +48,10 @@ unique(CD$diabTreatment)
 CD <- CD %>%
       mutate(diabDuration = str_replace_all(diabDuration, c("No"="0", "Yrs" = ""))) %>%
       mutate(diabDuration = as.integer(diabDuration)) %>%
+      mutate(Category = str_replace(Category, "PDR ", "PDR")) %>%
+      separate(BP, sep = "/", into = c("BP-sys", "BP-dia"), remove = TRUE)
+CD
+unique(CD$Category)
 ```
 
 ```{r}
