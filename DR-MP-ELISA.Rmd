@@ -51,7 +51,6 @@ CD <- CD %>%
       mutate(Category = str_replace(Category, "PDR ", "PDR")) %>%
       separate(BP, sep = "/", into = c("BP-sys", "BP-dia"), remove = TRUE)
 CD
-unique(CD$Category)
 ```
 
 ```{r}
