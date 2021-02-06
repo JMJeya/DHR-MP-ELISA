@@ -6,6 +6,9 @@ output: html_notebook
 ```{r}
 library("tidyverse")
 library("ggplot2")
+library("Hmisc")
+library("corrplot")
+library("caret")
 ```
 
 ```{r}
@@ -96,14 +99,125 @@ write.csv(CD_ACF_com, "CD_ACF_com.csv")
 
 ```
 
+```{r}
+colnames(fn.cd)
+fn.data <- fn.cd %>%
+           mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "FN_ng.ml.sMP")) %>%
+           drop_na()
+          
+## Find the correlation between all numerical data
+fn.data
+fn.corr <- cor(fn.data)
+corrplot(fn.corr)
+fn.corr
+```
+
+
+```{r}
+## Linear regression between FN values and LDL-HDL ratio
+fn.lhratio <- (lm(FN_ng.ml.sMP~LDL.HDLratio, fn.cd))
+
+## Visualizing regression between FN values and LDL-HDL ratio - ALL VALUES
+ggplot(fn.cd, aes(x = LDL.HDLratio, y = FN_ng.ml.sMP, color=Category)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  scale_y_log10()
+
+## Visualizing regression between FN values and LDL-HDL ratio - INDIVIDUAL CATEGORIES
+  ggplot(fn.cd, aes(x = LDL.HDLratio, y = FN_ng.ml.sMP, color=Category)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  scale_y_log10() +
+  facet_wrap(~Category)
+  
+## Print out the LM statisitics category wise using a for loop
+fn.cd <- fn.cd %>% 
+         mutate(Category = as.factor(Category)) 
+nlevels(fn.cd$Category) ## determines the number of levels in a variable but must be a factor
+cat <- unique(fn.cd$Category) ## stores the different levels as a character vector
+
+## Loop to display the summary of linear regression model based on sample category
+ 
+for (i in 1:nlevels(fn.cd$Category)){
+     df <- fn.cd %>% 
+     filter(Category == cat[i]) %>%
+     lm(FN_ng.ml.sMP~LDL.HDLratio, .) %>% 
+     summary()
+     print(cat[i])
+     print(df)
+     
+}
+```
+
+
+```{r}
+## Linear regression between FN values and LDL-HDL ratio
+fn.lhratio <- (lm(FN_ng.ml.sMP~LDL.HDLratio, fn.cd))
+
+## Visualizing regression between FN values and LDL-HDL ratio - ALL VALUES
+ggplot(fn.cd, aes(x = LDL.HDLratio, y = FN_ng.ml.sMP, color=Category)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  scale_y_log10()
+
+## Visualizing regression between FN values and LDL-HDL ratio - INDIVIDUAL CATEGORIES
+  ggplot(fn.cd, aes(x = LDL.HDLratio, y = FN_ng.ml.sMP, color=Category)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  scale_y_log10() +
+  facet_wrap(~Category)
+  
+## Print out the LM statisitics category wise using a for loop
+fn.cd <- fn.cd %>% 
+         mutate(Category = as.factor(Category)) 
+nlevels(fn.cd$Category) ## determines the number of levels in a variable but must be a factor
+cat <- unique(fn.cd$Category) ## stores the different levels as a character vector
+
+## Loop to display the summary of linear regression model based on sample category
+ 
+for (i in 1:nlevels(fn.cd$Category)){
+     df <- fn.cd %>% 
+     filter(Category == cat[i]) %>%
+     lm(log10(FN_ng.ml.sMP)~microAlb_mg.l, .) %>% 
+     summary()
+     print(cat[i])
+     print(df)
+     
+}
+```
 
 
 
 
+```{r}
+## Visualizing regression between FN values and other factors
+blood.param <- fn.cd[, c(6:7, 10:13, 15:25)]
+col <- colnames(blood.param)
+col[1]
+cNo <- c(6,7,10:13,15:25)
+cNo
+names(blood.param)
+
+for(i in nlevels(cNo)){
+  ggplot(fn.cd, aes(x = microAlb_mg.l, y = FN_ng.ml.sMP, color=Category)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  scale_y_log10() +
+  facet_wrap(~Category)
+}
+names(fn.cd)
+
+```
 
 
-
-
+```{r}
+  ggplot(fn.cd, aes(x = CRP_mg.l, y = FN_ng.ml.sMP, color=Category)) + 
+  geom_point() + 
+  geom_smooth(method = lm, se = FALSE) +
+  scale_y_log10() +
+  facet_wrap(~Category)
+```
 
 
 
