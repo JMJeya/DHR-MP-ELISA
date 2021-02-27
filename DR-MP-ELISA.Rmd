@@ -176,15 +176,7 @@ cat <- unique(fn.cd$Category) ## stores the different levels as a character vect
 
 ## Loop to display the summary of linear regression model based on sample category
  
-for (i in 1:nlevels(fn.cd$Category)){
-     df <- fn.cd %>% 
-     filter(Category == cat[i]) %>%
-     lm(log10(FN_ng.ml.sMP)~microAlb_mg.l, .) %>% 
-     summary()
-     print(cat[i])
-     print(df)
-     
-}
+
 ```
 
 
@@ -199,24 +191,20 @@ cNo <- c(6,7,10:13,15:25)
 cNo
 names(blood.param)
 
-for(i in nlevels(cNo)){
   ggplot(fn.cd, aes(x = microAlb_mg.l, y = FN_ng.ml.sMP, color=Category)) + 
   geom_point() + 
   geom_smooth(method = lm, se = FALSE) +
   scale_y_log10() +
   facet_wrap(~Category)
-}
-names(fn.cd)
+
 
 ```
 
 
 ```{r}
-  ggplot(fn.cd, aes(x = CRP_mg.l, y = FN_ng.ml.sMP, color=Category)) + 
-  geom_point() + 
-  geom_smooth(method = lm, se = FALSE) +
-  scale_y_log10() +
-  facet_wrap(~Category)
+ 
+getwd()
+
 ```
 
 

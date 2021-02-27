@@ -1,0 +1,35 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+setwd("G:/GITHUB/DHR-MP-ELISA")
+dir()
+
+```
+
+```{r}
+library(tidyverse)
+library(caret)
+library(ggplot2)
+```
+
+
+```{r}
+data <- read.csv("./CD_ACF_all.csv")
+data
+str(data)
+```
+
+```{r}
+ggplot(data, aes(x = Urea_mg.dl, y = FN_ng.ml.sMP)) +
+  geom_point() + 
+  stat_smooth() +
+  facet_wrap(~Category.x) +
+  scale_y_continuous(trans = 'log2')
+
+
+
+```
+
