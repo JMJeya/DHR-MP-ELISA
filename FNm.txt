@@ -1,0 +1,2180 @@
+[1] "model11"
+[1] "BMI"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-484.6 -335.1 -170.1  228.6 1323.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  316.509    329.170   0.962    0.344
+BMI            5.563     13.147   0.423    0.675
+
+Residual standard error: 448.6 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.005933,	Adjusted R-squared:  -0.0272 
+F-statistic: 0.179 on 1 and 30 DF,  p-value: 0.6752
+
+[1] "model12"
+[1] "BMI"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-423.83 -235.52  -98.41  219.61  962.15 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   682.24     452.74   1.507    0.142
+BMI           -11.22      17.67  -0.635    0.530
+
+Residual standard error: 333.6 on 32 degrees of freedom
+  (7 observations deleted due to missingness)
+Multiple R-squared:  0.01244,	Adjusted R-squared:  -0.01843 
+F-statistic: 0.403 on 1 and 32 DF,  p-value: 0.5301
+
+[1] "model13"
+[1] "BMI"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-403.5 -282.5 -135.9  193.0  995.9 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  512.724    577.015   0.889    0.386
+BMI           -3.269     21.817  -0.150    0.883
+
+Residual standard error: 401.8 on 18 degrees of freedom
+  (5 observations deleted due to missingness)
+Multiple R-squared:  0.001246,	Adjusted R-squared:  -0.05424 
+F-statistic: 0.02246 on 1 and 18 DF,  p-value: 0.8825
+
+[1] "model14"
+[1] "BMI"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-391.8 -277.6 -170.4  190.3  889.6 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  -230.68     412.98  -0.559    0.581
+BMI            23.48      16.00   1.467    0.153
+
+Residual standard error: 390.9 on 30 degrees of freedom
+  (10 observations deleted due to missingness)
+Multiple R-squared:  0.06697,	Adjusted R-squared:  0.03587 
+F-statistic: 2.153 on 1 and 30 DF,  p-value: 0.1527
+
+[1] "model15"
+[1] "BMI"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-393.51 -318.77  -88.09  171.87  829.45 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  467.552    390.058   1.199    0.239
+BMI           -3.022     15.830  -0.191    0.850
+
+Residual standard error: 354.5 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.001103,	Adjusted R-squared:  -0.02917 
+F-statistic: 0.03645 on 1 and 33 DF,  p-value: 0.8498
+
+[1] "model16"
+[1] "BMI"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-416.6 -293.9 -111.5  150.9 1610.4 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  408.065    326.614   1.249    0.220
+BMI            1.733     13.547   0.128    0.899
+
+Residual standard error: 446.6 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.0004955,	Adjusted R-squared:  -0.02979 
+F-statistic: 0.01636 on 1 and 33 DF,  p-value: 0.899
+
+[1] "model21"
+[1] "HbA1c"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-383.3 -336.1 -167.0  175.6 1327.9 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   964.68    1567.11   0.616    0.543
+HbA1c         -94.34     287.83  -0.328    0.745
+
+Residual standard error: 449.2 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.003568,	Adjusted R-squared:  -0.02965 
+F-statistic: 0.1074 on 1 and 30 DF,  p-value: 0.7454
+
+[1] "model22"
+[1] "HbA1c"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-406.5 -242.8 -133.3  249.9  908.0 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   264.14     274.25   0.963    0.342
+HbA1c          13.74      29.17   0.471    0.641
+
+Residual standard error: 331.8 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.006677,	Adjusted R-squared:  -0.02342 
+F-statistic: 0.2218 on 1 and 33 DF,  p-value: 0.6408
+
+[1] "model23"
+[1] "HbA1c"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-366.5 -281.9 -123.7  193.7 1039.8 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   447.50     336.61   1.329    0.199
+HbA1c          -3.52      33.00  -0.107    0.916
+
+Residual standard error: 397.1 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.0005985,	Adjusted R-squared:  -0.052 
+F-statistic: 0.01138 on 1 and 19 DF,  p-value: 0.9162
+
+[1] "model24"
+[1] "HbA1c"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-393.3 -239.6 -149.7  147.3 1253.3 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)    12.56     286.97   0.044    0.965
+HbA1c          34.17      27.02   1.265    0.215
+
+Residual standard error: 382.4 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.04762,	Adjusted R-squared:  0.01786 
+F-statistic:   1.6 on 1 and 32 DF,  p-value: 0.215
+
+[1] "model25"
+[1] "HbA1c"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-454.0 -292.6 -107.8  214.9  757.8 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   127.44     281.75   0.452    0.654
+HbA1c          26.48      27.37   0.968    0.340
+
+Residual standard error: 349.8 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.02758,	Adjusted R-squared:  -0.001883 
+F-statistic: 0.9361 on 1 and 33 DF,  p-value: 0.3403
+
+[1] "model26"
+[1] "HbA1c"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-400.7 -272.1 -125.3  129.1 1607.7 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   578.21     349.17   1.656    0.107
+HbA1c         -12.92      34.02  -0.380    0.707
+
+Residual standard error: 445.7 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.004353,	Adjusted R-squared:  -0.02582 
+F-statistic: 0.1443 on 1 and 33 DF,  p-value: 0.7065
+
+[1] "model31"
+[1] "ESR"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-484.49 -327.76  -34.97  193.23 1217.01 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  623.482    126.506   4.928 2.85e-05 ***
+ESR          -14.279      8.408  -1.698   0.0998 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 429.8 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.08771,	Adjusted R-squared:  0.0573 
+F-statistic: 2.884 on 1 and 30 DF,  p-value: 0.09979
+
+[1] "model32"
+[1] "ESR"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-441.4 -232.5 -120.1  250.8  963.3 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  340.725    103.998   3.276  0.00248 **
+ESR            3.024      5.316   0.569  0.57328   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 331.3 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.009712,	Adjusted R-squared:  -0.0203 
+F-statistic: 0.3236 on 1 and 33 DF,  p-value: 0.5733
+
+[1] "model33"
+[1] "ESR"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-499.0 -252.1 -167.1  258.6  742.5 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  298.070    125.196   2.381   0.0279 *
+ESR            6.944      5.649   1.229   0.2340  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 382.3 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.07365,	Adjusted R-squared:  0.0249 
+F-statistic: 1.511 on 1 and 19 DF,  p-value: 0.234
+
+[1] "model34"
+[1] "ESR"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-409.1 -279.7 -157.6  171.3 1246.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  285.475    120.020   2.379   0.0239 *
+ESR            3.602      3.579   1.006   0.3223  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 390.6 on 30 degrees of freedom
+  (10 observations deleted due to missingness)
+Multiple R-squared:  0.03266,	Adjusted R-squared:  0.0004138 
+F-statistic: 1.013 on 1 and 30 DF,  p-value: 0.3223
+
+[1] "model35"
+[1] "ESR"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-390.50 -304.16  -80.06  211.33  802.05 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  357.011    103.744   3.441  0.00159 **
+ESR            1.047      2.401   0.436  0.66575   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 353.7 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.005725,	Adjusted R-squared:  -0.0244 
+F-statistic:  0.19 on 1 and 33 DF,  p-value: 0.6657
+
+[1] "model36"
+[1] "ESR"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-476.4 -281.3 -130.8  115.7 1558.4 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  532.327    122.374   4.350 0.000123 ***
+ESR           -2.745      3.183  -0.862 0.394658    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 441.8 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.02204,	Adjusted R-squared:  -0.007591 
+F-statistic: 0.7438 on 1 and 33 DF,  p-value: 0.3947
+
+[1] "model41"
+[1] "Hb_gm.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-604.03 -311.82  -28.72  185.28 1241.03 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  -881.22     589.32  -1.495   0.1453  
+Hb_gm.dl      100.36      44.03   2.280   0.0299 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 415.4 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.1476,	Adjusted R-squared:  0.1192 
+F-statistic: 5.196 on 1 and 30 DF,  p-value: 0.02992
+
+[1] "model42"
+[1] "Hb_gm.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-375.9 -261.5 -118.3  224.3  922.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   -15.02     546.86  -0.027    0.978
+Hb_gm.dl       32.28      43.29   0.746    0.461
+
+Residual standard error: 330.2 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.01657,	Adjusted R-squared:  -0.01324 
+F-statistic: 0.5559 on 1 and 33 DF,  p-value: 0.4612
+
+[1] "model43"
+[1] "Hb_gm.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-394.7 -283.4 -113.0  212.8 1010.7 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   585.82     839.01   0.698    0.494
+Hb_gm.dl      -12.16      63.58  -0.191    0.850
+
+Residual standard error: 402.5 on 18 degrees of freedom
+  (5 observations deleted due to missingness)
+Multiple R-squared:  0.002029,	Adjusted R-squared:  -0.05341 
+F-statistic: 0.03659 on 1 and 18 DF,  p-value: 0.8504
+
+[1] "model44"
+[1] "Hb_gm.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-361.4 -270.8 -158.3  176.5 1224.1 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  415.224    493.913   0.841    0.407
+Hb_gm.dl      -1.842     38.899  -0.047    0.963
+
+Residual standard error: 401.3 on 29 degrees of freedom
+  (11 observations deleted due to missingness)
+Multiple R-squared:  7.734e-05,	Adjusted R-squared:  -0.0344 
+F-statistic: 0.002243 on 1 and 29 DF,  p-value: 0.9625
+
+[1] "model45"
+[1] "Hb_gm.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-400.61 -309.82  -74.84  172.05  803.43 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  378.219    418.662   0.903    0.373
+Hb_gm.dl       2.036     33.435   0.061    0.952
+
+Residual standard error: 355.5 on 32 degrees of freedom
+  (3 observations deleted due to missingness)
+Multiple R-squared:  0.0001158,	Adjusted R-squared:  -0.03113 
+F-statistic: 0.003707 on 1 and 32 DF,  p-value: 0.9518
+
+[1] "model46"
+[1] "Hb_gm.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-624.1 -300.3 -119.1  198.9 1448.5 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  -676.67     572.71  -1.182   0.2464  
+Hb_gm.dl       92.06      45.57   2.020   0.0521 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 424 on 31 degrees of freedom
+  (10 observations deleted due to missingness)
+Multiple R-squared:  0.1163,	Adjusted R-squared:  0.08783 
+F-statistic: 4.081 on 1 and 31 DF,  p-value: 0.05207
+
+[1] "model51"
+[1] "Urea_mg.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-430.9 -314.9 -124.9  161.8 1296.0 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   707.32     290.48   2.435    0.021 *
+Urea_mg.dl    -10.81      11.82  -0.914    0.368  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 443.8 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.02709,	Adjusted R-squared:  -0.005339 
+F-statistic: 0.8354 on 1 and 30 DF,  p-value: 0.368
+
+[1] "model52"
+[1] "Urea_mg.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-359.9 -236.7 -115.7  250.7  959.0 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 393.5753   164.3134   2.395   0.0224 *
+Urea_mg.dl   -0.1134     5.8413  -0.019   0.9846  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 332.9 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  1.142e-05,	Adjusted R-squared:  -0.03029 
+F-statistic: 0.0003769 on 1 and 33 DF,  p-value: 0.9846
+
+[1] "model53"
+[1] "Urea_mg.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-384.1 -276.9 -132.0  187.6 1029.3 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  459.050    205.368   2.235   0.0376 *
+Urea_mg.dl    -1.669      6.720  -0.248   0.8066  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 396.6 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.003234,	Adjusted R-squared:  -0.04923 
+F-statistic: 0.06165 on 1 and 19 DF,  p-value: 0.8066
+
+[1] "model54"
+[1] "Urea_mg.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-345.2 -263.4 -166.9  109.5 1239.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  405.626    172.781   2.348   0.0252 *
+Urea_mg.dl    -1.214      4.872  -0.249   0.8048  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 391.5 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.001937,	Adjusted R-squared:  -0.02925 
+F-statistic: 0.0621 on 1 and 32 DF,  p-value: 0.8048
+
+[1] "model55"
+[1] "Urea_mg.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-423.6 -300.0 -142.7  238.4  690.7 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  202.023    160.853   1.256    0.218
+Urea_mg.dl     6.332      4.943   1.281    0.209
+
+Residual standard error: 346.2 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.04738,	Adjusted R-squared:  0.01851 
+F-statistic: 1.641 on 1 and 33 DF,  p-value: 0.2091
+
+[1] "model56"
+[1] "Urea_mg.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-441.1 -282.9 -155.8  109.7 1563.6 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  653.660    276.789   2.362   0.0243 *
+Urea_mg.dl    -6.812      8.857  -0.769   0.4473  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 442.8 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.01761,	Adjusted R-squared:  -0.01216 
+F-statistic: 0.5915 on 1 and 33 DF,  p-value: 0.4473
+
+[1] "model61"
+[1] "creatinine_mg.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-426.9 -317.4 -144.4  192.1 1265.5 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)  
+(Intercept)         672.8      362.2   1.857   0.0731 .
+creatinine_mg.dl   -262.0      418.9  -0.625   0.5364  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 447 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.01287,	Adjusted R-squared:  -0.02003 
+F-statistic: 0.3912 on 1 and 30 DF,  p-value: 0.5364
+
+[1] "model62"
+[1] "creatinine_mg.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-350.1 -257.4 -114.6  224.1  964.8 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)   
+(Intercept)        343.85     118.70   2.897  0.00665 **
+creatinine_mg.dl    50.95     114.05   0.447  0.65800   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 331.9 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.006011,	Adjusted R-squared:  -0.02411 
+F-statistic: 0.1996 on 1 and 33 DF,  p-value: 0.658
+
+[1] "model63"
+[1] "creatinine_mg.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-387.7 -271.9 -132.2  183.4 1027.4 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)   
+(Intercept)        424.37     120.92   3.510  0.00234 **
+creatinine_mg.dl   -10.56      77.02  -0.137  0.89239   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 397 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.0009883,	Adjusted R-squared:  -0.05159 
+F-statistic: 0.0188 on 1 and 19 DF,  p-value: 0.8924
+
+[1] "model64"
+[1] "creatinine_mg.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-345.0 -239.4 -162.3  167.4 1232.3 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)   
+(Intercept)        429.26     127.60   3.364  0.00201 **
+creatinine_mg.dl   -58.81     100.97  -0.582  0.56438   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 389.8 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.01049,	Adjusted R-squared:  -0.02043 
+F-statistic: 0.3392 on 1 and 32 DF,  p-value: 0.5644
+
+[1] "model65"
+[1] "creatinine_mg.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-392.63 -324.73  -33.53  171.74  794.75 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)         478.6      126.7   3.779 0.000627 ***
+creatinine_mg.dl    -78.2      103.3  -0.757 0.454401    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 351.6 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.01707,	Adjusted R-squared:  -0.01272 
+F-statistic: 0.5731 on 1 and 33 DF,  p-value: 0.4544
+
+[1] "model66"
+[1] "creatinine_mg.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-426.4 -332.2 -101.3  159.4 1613.6 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)  
+(Intercept)        400.97     178.47   2.247   0.0315 *
+creatinine_mg.dl    46.03     155.97   0.295   0.7697  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 446.1 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.002633,	Adjusted R-squared:  -0.02759 
+F-statistic: 0.08711 on 1 and 33 DF,  p-value: 0.7697
+
+[1] "model71"
+[1] "TCH"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-460.5 -318.7 -157.0  205.2 1344.8 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  221.046    461.001   0.479    0.635
+TCH            1.138      2.241   0.508    0.615
+
+Residual standard error: 448 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.008524,	Adjusted R-squared:  -0.02452 
+F-statistic: 0.2579 on 1 and 30 DF,  p-value: 0.6153
+
+[1] "model72"
+[1] "TCH"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-412.9 -207.8 -100.4  205.9  990.6 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   -78.90     237.89  -0.332   0.7422  
+TCH             2.53       1.25   2.025   0.0511 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 314 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.1105,	Adjusted R-squared:  0.08353 
+F-statistic: 4.099 on 1 and 33 DF,  p-value: 0.05107
+
+[1] "model73"
+[1] "TCH"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-378.73 -280.25  -96.62  134.93 1034.68 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  742.528    338.168   2.196   0.0407 *
+TCH           -1.767      1.755  -1.007   0.3266  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 387 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.05066,	Adjusted R-squared:  0.0006951 
+F-statistic: 1.014 on 1 and 19 DF,  p-value: 0.3266
+
+[1] "model74"
+[1] "TCH"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-414.8 -264.9 -121.0  118.9 1221.4 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   41.279    258.395   0.160    0.874
+TCH            1.550      1.193   1.299    0.203
+
+Residual standard error: 381.9 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.05008,	Adjusted R-squared:  0.0204 
+F-statistic: 1.687 on 1 and 32 DF,  p-value: 0.2033
+
+[1] "model75"
+[1] "TCH"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-443.04 -287.33  -78.35  252.01  686.15 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  66.3528   202.2234   0.328    0.745
+TCH           1.6295     0.9643   1.690    0.100
+
+Residual standard error: 340.3 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.07964,	Adjusted R-squared:  0.05175 
+F-statistic: 2.856 on 1 and 33 DF,  p-value: 0.1005
+
+[1] "model76"
+[1] "TCH"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-518.4 -246.0 -117.7  149.8 1422.1 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -229.432    292.456  -0.785   0.4383  
+TCH            3.601      1.508   2.388   0.0228 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 412.5 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.1473,	Adjusted R-squared:  0.1215 
+F-statistic: 5.701 on 1 and 33 DF,  p-value: 0.02284
+
+[1] "model81"
+[1] "TC_mg.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-501.5 -290.8 -148.1  155.2 1446.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 180.3699   156.3798   1.153   0.2578  
+TC_mg.dl      1.5086     0.7635   1.976   0.0574 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 423.3 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.1151,	Adjusted R-squared:  0.08565 
+F-statistic: 3.904 on 1 and 30 DF,  p-value: 0.05743
+
+[1] "model82"
+[1] "TC_mg.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-371.20 -250.48  -97.79  220.72  979.62 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 314.1395   109.4916   2.869  0.00713 **
+TC_mg.dl      0.3414     0.4209   0.811  0.42317   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 329.7 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.01954,	Adjusted R-squared:  -0.01017 
+F-statistic: 0.6577 on 1 and 33 DF,  p-value: 0.4232
+
+[1] "model83"
+[1] "TC_mg.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-389.7 -271.7 -103.2  162.3  995.8 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 481.8401   182.4816   2.640   0.0161 *
+TC_mg.dl     -0.3948     0.9196  -0.429   0.6725  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 395.3 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.009607,	Adjusted R-squared:  -0.04252 
+F-statistic: 0.1843 on 1 and 19 DF,  p-value: 0.6725
+
+[1] "model84"
+[1] "TC_mg.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-333.0 -276.6 -174.9  112.2 1248.3 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 356.82675  175.54512   2.033   0.0505 .
+TC_mg.dl      0.04372    0.77705   0.056   0.9555  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 391.8 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  9.892e-05,	Adjusted R-squared:  -0.03115 
+F-statistic: 0.003166 on 1 and 32 DF,  p-value: 0.9555
+
+[1] "model85"
+[1] "TC_mg.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-499.45 -248.02  -91.14  207.90  641.61 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept) 215.0679   131.4110   1.637    0.111
+TC_mg.dl      0.7803     0.5144   1.517    0.139
+
+Residual standard error: 342.9 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.06519,	Adjusted R-squared:  0.03686 
+F-statistic: 2.301 on 1 and 33 DF,  p-value: 0.1388
+
+[1] "model86"
+[1] "TC_mg.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-410.5 -310.0 -116.9  115.1 1637.5 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 335.9945   171.1289   1.963   0.0581 .
+TC_mg.dl      0.6449     0.8804   0.733   0.4690  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 443.1 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.016,	Adjusted R-squared:  -0.01382 
+F-statistic: 0.5366 on 1 and 33 DF,  p-value: 0.469
+
+[1] "model91"
+[1] "HDL_mg.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-442.8 -311.0 -156.8  162.8 1266.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  209.448    383.650   0.546    0.589
+HDL_mg.dl      5.837      9.046   0.645    0.524
+
+Residual standard error: 446.9 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.01369,	Adjusted R-squared:  -0.01919 
+F-statistic: 0.4163 on 1 and 30 DF,  p-value: 0.5237
+
+[1] "model92"
+[1] "HDL_mg.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-386.1 -243.0 -109.4  226.7  928.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  618.515    258.300   2.395   0.0225 *
+HDL_mg.dl     -5.638      6.239  -0.904   0.3727  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 328.9 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.02415,	Adjusted R-squared:  -0.005425 
+F-statistic: 0.8165 on 1 and 33 DF,  p-value: 0.3727
+
+[1] "model93"
+[1] "HDL_mg.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-402.4 -277.2 -120.1  174.4 1019.4 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  655.738    480.084   1.366    0.188
+HDL_mg.dl     -5.656     10.996  -0.514    0.613
+
+Residual standard error: 394.5 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.01373,	Adjusted R-squared:  -0.03818 
+F-statistic: 0.2646 on 1 and 19 DF,  p-value: 0.6129
+
+[1] "model94"
+[1] "HDL_mg.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-531.17 -179.13  -82.91   71.81 1188.02 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -355.601    315.643  -1.127   0.2683  
+HDL_mg.dl     17.001      7.292   2.332   0.0262 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 362.3 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.1452,	Adjusted R-squared:  0.1185 
+F-statistic: 5.436 on 1 and 32 DF,  p-value: 0.02618
+
+[1] "model95"
+[1] "HDL_mg.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-399.64 -306.30  -80.22  169.67  834.04 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  450.746    276.179   1.632    0.112
+HDL_mg.dl     -1.460      6.933  -0.211    0.835
+
+Residual standard error: 354.4 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.001342,	Adjusted R-squared:  -0.02892 
+F-statistic: 0.04435 on 1 and 33 DF,  p-value: 0.8345
+
+[1] "model96"
+[1] "HDL_mg.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-495.4 -275.4 -134.4  135.2 1591.7 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  259.638    348.982   0.744    0.462
+HDL_mg.dl      4.650      8.382   0.555    0.583
+
+Residual standard error: 444.6 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.009241,	Adjusted R-squared:  -0.02078 
+F-statistic: 0.3078 on 1 and 33 DF,  p-value: 0.5828
+
+[1] "model101"
+[1] "LDL_mg.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-481.9 -333.1 -146.8  232.3 1228.0 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  740.501    347.595   2.130   0.0415 *
+LDL_mg.dl     -2.298      2.694  -0.853   0.4004  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 444.6 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.02368,	Adjusted R-squared:  -0.008866 
+F-statistic: 0.7276 on 1 and 30 DF,  p-value: 0.4004
+
+[1] "model102"
+[1] "LDL_mg.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-427.5 -183.7 -106.8  245.0  945.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  129.987    147.064   0.884   0.3832  
+LDL_mg.dl      2.612      1.373   1.902   0.0659 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 316.1 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.09878,	Adjusted R-squared:  0.07147 
+F-statistic: 3.617 on 1 and 33 DF,  p-value: 0.06595
+
+[1] "model103"
+[1] "LDL_mg.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-355.10 -289.76  -81.69  167.20 1058.93 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  549.854    209.509   2.624   0.0167 *
+LDL_mg.dl     -1.263      1.763  -0.717   0.4824  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 391.9 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.02631,	Adjusted R-squared:  -0.02493 
+F-statistic: 0.5135 on 1 and 19 DF,  p-value: 0.4824
+
+[1] "model104"
+[1] "LDL_mg.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-400.7 -270.0 -122.3  112.2 1229.9 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  189.245    183.487   1.031     0.31
+LDL_mg.dl      1.405      1.361   1.032     0.31
+
+Residual standard error: 385.5 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.03223,	Adjusted R-squared:  0.00199 
+F-statistic: 1.066 on 1 and 32 DF,  p-value: 0.3096
+
+[1] "model105"
+[1] "LDL_mg.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-463.8 -288.7  -93.3  244.2  682.6 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  176.549    158.773   1.112    0.274
+LDL_mg.dl      1.869      1.270   1.471    0.151
+
+Residual standard error: 343.6 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.06156,	Adjusted R-squared:  0.03313 
+F-statistic: 2.165 on 1 and 33 DF,  p-value: 0.1507
+
+[1] "model106"
+[1] "LDL_mg.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-551.3 -278.1 -117.2  133.7 1404.6 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   34.551    203.750   0.170   0.8664  
+LDL_mg.dl      3.677      1.697   2.167   0.0375 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 418 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.1246,	Adjusted R-squared:  0.09806 
+F-statistic: 4.696 on 1 and 33 DF,  p-value: 0.03754
+
+[1] "model111"
+[1] "VLDL_mg.dl"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-503.8 -289.3 -148.9  157.8 1447.4 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  178.046    156.195   1.140   0.2633  
+VLDL_mg.dl     7.608      3.813   1.995   0.0552 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 422.8 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.1171,	Adjusted R-squared:  0.08772 
+F-statistic: 3.981 on 1 and 30 DF,  p-value: 0.05518
+
+[1] "model112"
+[1] "VLDL_mg.dl"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-371.48 -250.36  -97.01  220.78  979.14 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  313.285    109.437   2.863  0.00724 **
+VLDL_mg.dl     1.726      2.104   0.821  0.41778   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 329.6 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:   0.02,	Adjusted R-squared:  -0.009701 
+F-statistic: 0.6733 on 1 and 33 DF,  p-value: 0.4178
+
+[1] "model113"
+[1] "VLDL_mg.dl"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-390.6 -270.9 -103.1  161.1  993.8 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  484.365    182.419   2.655   0.0156 *
+VLDL_mg.dl    -2.050      4.605  -0.445   0.6612  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 395.2 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.01032,	Adjusted R-squared:  -0.04177 
+F-statistic: 0.1982 on 1 and 19 DF,  p-value: 0.6612
+
+[1] "model114"
+[1] "VLDL_mg.dl"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-332.9 -276.6 -174.9  112.2 1248.2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept) 356.4283   176.1690   2.023   0.0515 .
+VLDL_mg.dl    0.2279     3.8965   0.058   0.9537  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 391.8 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.0001069,	Adjusted R-squared:  -0.03114 
+F-statistic: 0.00342 on 1 and 32 DF,  p-value: 0.9537
+
+[1] "model115"
+[1] "VLDL_mg.dl"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-500.86 -247.79  -89.21  208.58  642.32 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  214.053    130.763   1.637    0.111
+VLDL_mg.dl     3.931      2.561   1.535    0.134
+
+Residual standard error: 342.7 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.06661,	Adjusted R-squared:  0.03833 
+F-statistic: 2.355 on 1 and 33 DF,  p-value: 0.1344
+
+[1] "model116"
+[1] "VLDL_mg.dl"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-469.5 -295.8 -112.3  113.9 1554.3 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)  234.179    168.935   1.386    0.175
+VLDL_mg.dl     6.046      4.289   1.410    0.168
+
+Residual standard error: 433.8 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.05679,	Adjusted R-squared:  0.02821 
+F-statistic: 1.987 on 1 and 33 DF,  p-value: 0.168
+
+[1] "model121"
+[1] "TCH.HDLratio"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-476.5 -330.6 -147.0  220.1 1351.2 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)    339.99     317.36   1.071    0.293
+TCH.HDLratio    21.96      60.40   0.364    0.719
+
+Residual standard error: 449 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.004386,	Adjusted R-squared:  -0.0288 
+F-statistic: 0.1322 on 1 and 30 DF,  p-value: 0.7188
+
+[1] "model122"
+[1] "TCH.HDLratio"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-345.10 -164.32  -57.81   86.06  934.86 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -245.51     180.95  -1.357 0.184047    
+TCH.HDLratio   137.51      37.74   3.643 0.000915 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 281.2 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.2868,	Adjusted R-squared:  0.2652 
+F-statistic: 13.27 on 1 and 33 DF,  p-value: 0.0009146
+
+[1] "model123"
+[1] "TCH.HDLratio"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-403.48 -264.82  -85.41  146.00 1042.82 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)     698.5      356.9   1.957   0.0652 .
+TCH.HDLratio    -64.8       78.6  -0.824   0.4199  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 390.3 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.03454,	Adjusted R-squared:  -0.01627 
+F-statistic: 0.6797 on 1 and 19 DF,  p-value: 0.4199
+
+[1] "model124"
+[1] "TCH.HDLratio"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-360.3 -272.4 -174.6  102.8 1247.9 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    455.88     236.34   1.929   0.0627 .
+TCH.HDLratio   -17.86      45.01  -0.397   0.6941  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 390.9 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.004896,	Adjusted R-squared:  -0.0262 
+F-statistic: 0.1575 on 1 and 32 DF,  p-value: 0.6941
+
+[1] "model125"
+[1] "TCH.HDLratio"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-436.5 -263.2  -93.2  239.2  774.3 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)    109.46     206.09   0.531    0.599
+TCH.HDLratio    54.12      37.61   1.439    0.160
+
+Residual standard error: 344.1 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.05904,	Adjusted R-squared:  0.03053 
+F-statistic: 2.071 on 1 and 33 DF,  p-value: 0.1596
+
+[1] "model126"
+[1] "TCH.HDLratio"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-544.53 -234.66  -92.07  186.68 1514.25 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   -198.17     338.78  -0.585   0.5626  
+TCH.HDLratio   137.87      70.58   1.953   0.0593 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 422.9 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.1036,	Adjusted R-squared:  0.07649 
+F-statistic: 3.816 on 1 and 33 DF,  p-value: 0.05929
+
+[1] "model131"
+[1] "LDL.HDLratio"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-522.5 -315.4 -159.5  220.2 1171.4 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    741.26     295.71   2.507   0.0178 *
+LDL.HDLratio   -92.85      91.44  -1.015   0.3180  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 442.4 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.03323,	Adjusted R-squared:  0.0009992 
+F-statistic: 1.031 on 1 and 30 DF,  p-value: 0.318
+
+[1] "model132"
+[1] "LDL.HDLratio"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-430.09 -187.63  -50.13  174.13  825.03 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -199.75     155.35  -1.286 0.207464    
+LDL.HDLratio   241.37      60.64   3.981 0.000356 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 273.7 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.3244,	Adjusted R-squared:  0.3039 
+F-statistic: 15.84 on 1 and 33 DF,  p-value: 0.0003555
+
+[1] "model133"
+[1] "LDL.HDLratio"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-356.7 -297.9 -116.6  178.7 1043.0 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    462.04     225.03   2.053   0.0541 .
+LDL.HDLratio   -19.29      81.38  -0.237   0.8152  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 396.6 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.002948,	Adjusted R-squared:  -0.04953 
+F-statistic: 0.05617 on 1 and 19 DF,  p-value: 0.8152
+
+[1] "model134"
+[1] "LDL.HDLratio"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-407.2 -279.9 -146.9  112.1 1194.3 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)    260.69     175.42   1.486    0.147
+LDL.HDLratio    34.68      53.44   0.649    0.521
+
+Residual standard error: 389.3 on 32 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.01299,	Adjusted R-squared:  -0.01786 
+F-statistic: 0.4211 on 1 and 32 DF,  p-value: 0.521
+
+[1] "model135"
+[1] "LDL.HDLratio"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-398.8 -273.4 -106.5  232.7  793.2 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)    182.75     167.03   1.094    0.282
+LDL.HDLratio    70.95      52.57   1.350    0.186
+
+Residual standard error: 345.3 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.05231,	Adjusted R-squared:  0.02359 
+F-statistic: 1.822 on 1 and 33 DF,  p-value: 0.1863
+
+[1] "model136"
+[1] "LDL.HDLratio"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-610.8 -247.8 -139.4  156.0 1508.4 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)     144.8      214.6   0.675    0.504
+LDL.HDLratio    110.1       73.1   1.506    0.141
+
+Residual standard error: 432.1 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.06433,	Adjusted R-squared:  0.03598 
+F-statistic: 2.269 on 1 and 33 DF,  p-value: 0.1415
+
+[1] "model141"
+[1] "CRP_mg.l"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-439.5 -333.6 -143.8  190.4 1296.3 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   404.49     163.22   2.478   0.0191 *
+CRP_mg.l       10.40      31.41   0.331   0.7429  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 449.1 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.003639,	Adjusted R-squared:  -0.02957 
+F-statistic: 0.1096 on 1 and 30 DF,  p-value: 0.7429
+
+[1] "model142"
+[1] "CRP_mg.l"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-360.5 -237.8 -115.8  251.1  958.5 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 391.02905   82.77146   4.724 4.15e-05 ***
+CRP_mg.l     -0.06907    9.30125  -0.007    0.994    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 332.9 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  1.671e-06,	Adjusted R-squared:  -0.0303 
+F-statistic: 5.515e-05 on 1 and 33 DF,  p-value: 0.9941
+
+[1] "model143"
+[1] "CRP_mg.l"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-443.5 -248.1 -160.9  232.2  985.1 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)   353.86     138.55   2.554   0.0194 *
+CRP_mg.l       12.27      22.61   0.543   0.5936  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 394.2 on 19 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.01527,	Adjusted R-squared:  -0.03656 
+F-statistic: 0.2946 on 1 and 19 DF,  p-value: 0.5936
+
+[1] "model144"
+[1] "CRP_mg.l"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-379.3 -270.6 -172.7  118.9 1226.5 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  315.263    118.552   2.659   0.0123 *
+CRP_mg.l       8.359     13.643   0.613   0.5446  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 392.3 on 31 degrees of freedom
+  (9 observations deleted due to missingness)
+Multiple R-squared:  0.01196,	Adjusted R-squared:  -0.01991 
+F-statistic: 0.3754 on 1 and 31 DF,  p-value: 0.5446
+
+[1] "model145"
+[1] "CRP_mg.l"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-514.15 -295.38  -50.21  141.82  705.51 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   318.52      83.46   3.816 0.000565 ***
+CRP_mg.l       14.30      11.27   1.269 0.213485    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 346.3 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.0465,	Adjusted R-squared:  0.0176 
+F-statistic: 1.609 on 1 and 33 DF,  p-value: 0.2135
+
+[1] "model146"
+[1] "CRP_mg.l"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-431.5 -292.8 -119.6  152.4 1592.5 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  472.303     88.450   5.340 6.77e-06 ***
+CRP_mg.l      -2.831      5.584  -0.507    0.616    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 445 on 33 degrees of freedom
+  (8 observations deleted due to missingness)
+Multiple R-squared:  0.007727,	Adjusted R-squared:  -0.02234 
+F-statistic: 0.257 on 1 and 33 DF,  p-value: 0.6156
+
+[1] "model151"
+[1] "microAlb_mg.l"
+[1] NDM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-463.1 -298.0 -174.2  226.5 1306.8 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept)    325.638    197.729   1.647    0.110
+microAlb_mg.l    4.080      5.868   0.695    0.492
+
+Residual standard error: 446.4 on 30 degrees of freedom
+  (4 observations deleted due to missingness)
+Multiple R-squared:  0.01586,	Adjusted R-squared:  -0.01695 
+F-statistic: 0.4834 on 1 and 30 DF,  p-value: 0.4922
+
+[1] "model152"
+[1] "microAlb_mg.l"
+[1] DM
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-396.7 -246.1 -119.6  196.5  923.3 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    554.633    131.863   4.206 0.000187 ***
+microAlb_mg.l   -4.285      3.133  -1.368 0.180689    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 323.9 on 33 degrees of freedom
+  (6 observations deleted due to missingness)
+Multiple R-squared:  0.05363,	Adjusted R-squared:  0.02496 
+F-statistic:  1.87 on 1 and 33 DF,  p-value: 0.1807
+
+[1] "model153"
+[1] "microAlb_mg.l"
+[1] NMI
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-401.24 -301.66  -79.17  202.58 1000.96 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    663.730    245.500   2.704   0.0145 *
+microAlb_mg.l   -5.197      5.020  -1.035   0.3142  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 391.4 on 18 degrees of freedom
+  (5 observations deleted due to missingness)
+Multiple R-squared:  0.0562,	Adjusted R-squared:  0.00377 
+F-statistic: 1.072 on 1 and 18 DF,  p-value: 0.3142
+
+[1] "model154"
+[1] "microAlb_mg.l"
+[1] NMO
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-418.2 -283.5 -171.4  144.8 1239.7 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    297.477    169.055   1.760   0.0887 .
+microAlb_mg.l    1.486      2.695   0.551   0.5854  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 396.5 on 30 degrees of freedom
+  (10 observations deleted due to missingness)
+Multiple R-squared:  0.01003,	Adjusted R-squared:  -0.02296 
+F-statistic: 0.3041 on 1 and 30 DF,  p-value: 0.5854
+
+[1] "model155"
+[1] "microAlb_mg.l"
+[1] NS
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-446.8 -291.3 -137.0  204.1  697.2 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    285.961    141.584    2.02   0.0516 .
+microAlb_mg.l    1.745      2.077    0.84   0.4069  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 350.9 on 33 degrees of freedom
+  (2 observations deleted due to missingness)
+Multiple R-squared:  0.02094,	Adjusted R-squared:  -0.008726 
+F-statistic: 0.7059 on 1 and 33 DF,  p-value: 0.4069
+
+[1] "model156"
+[1] "microAlb_mg.l"
+[1] PDR
+Levels: NDM DM NMI NMO NS PDR
+
+Call:
+lm(formula = as.formula(paste("FN_ng.ml.sMP ~ ", colnames(data[z]))), 
+    data = subset(data, Category.x == cat[j]))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-528.9 -249.2 -152.6  217.9 1535.9 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)    628.551    192.974   3.257  0.00273 **
+microAlb_mg.l   -2.734      3.060  -0.893  0.37853   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 445.3 on 31 degrees of freedom
+  (10 observations deleted due to missingness)
+Multiple R-squared:  0.0251,	Adjusted R-squared:  -0.006347 
+F-statistic: 0.7982 on 1 and 31 DF,  p-value: 0.3785
+
