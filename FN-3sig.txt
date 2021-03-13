@@ -1,0 +1,60 @@
+[1] "ESR"
+[1] NDM
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  623.482    126.506   4.928 2.85e-05 ***
+--
+---
+--
+[1] "ESR"
+[1] PDR
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  532.327    122.374   4.350 0.000123 ***
+--
+---
+--
+[1] "creatinine_mg.dl"
+[1] NS
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)         478.6      126.7   3.779 0.000627 ***
+--
+--
+[1] "TCH.HDLratio"
+[1] DM
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -245.51     180.95  -1.357 0.184047    
+TCH.HDLratio   137.51      37.74   3.643 0.000915 ***
+--
+--
+[1] "LDL.HDLratio"
+[1] DM
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -199.75     155.35  -1.286 0.207464    
+LDL.HDLratio   241.37      60.64   3.981 0.000356 ***
+--
+---
+--
+[1] "CRP_mg.l"
+[1] DM
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 391.02905   82.77146   4.724 4.15e-05 ***
+--
+---
+--
+[1] "CRP_mg.l"
+[1] NS
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   318.52      83.46   3.816 0.000565 ***
+--
+---
+--
+[1] "CRP_mg.l"
+[1] PDR
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  472.303     88.450   5.340 6.77e-06 ***
+--
+---
+--
+[1] "microAlb_mg.l"
+[1] DM
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    554.633    131.863   4.206 0.000187 ***
