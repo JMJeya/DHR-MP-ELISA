@@ -106,12 +106,32 @@ fn.data <- fn.cd %>%
            mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
            select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "FN_ng.ml.sMP")) %>%
            drop_na()
+colnames(cd41.cd)
+cd41.data <- cd41.cd %>%
+           mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "CD41_ng.ml.sMP")) %>%
+           drop_na()
+
+colnames(a2m.cd)
+a2m.data <- a2m.cd %>%
+           mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "A2M_ng.ml.sMP")) %>%
+           drop_na()
           
 ## Find the correlation between all numerical data
 fn.data
 fn.corr <- cor(fn.data)
 corrplot(fn.corr)
 fn.corr
+
+cd41.data
+cd41.corr <- cor(cd41.data)
+corrplot(cd41.corr)
+cd41.corr
+
+a2m.data
+a2m.corr <- cor(a2m.data)
+corrplot(a2m.corr)
 ```
 
 
