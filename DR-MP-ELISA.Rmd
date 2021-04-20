@@ -243,9 +243,168 @@ summ(lm(FN_ng.ml.sMP~ESR + CRP_mg.l, data = fn.cd, subset = fn.cd$Category=="NS"
 summ(lm(FN_ng.ml.sMP~ESR + CRP_mg.l, data = fn.cd, subset = fn.cd$Category=="PDR"))
 ```
 
+```{r}
+### VIOLIN PLOTS
+
+## CD41
+cd41.cd
+colnames(cd41.cd)
+cd41.cd <- cd41.cd %>%
+           mutate(Category = fct_relevel(Category, c("NDM", "DM", "NMI", "NMO", "NS", "PDR")))
+ggplot(data = cd41.cd, aes(x = Category, y = CD41_ng.ml.sMP, fill = Category)) +
+ geom_violin(draw_quantiles = c(0.25, 0.5, 0.75), show.legend = FALSE)
+
+## FIBRONECTIN
+colnames(fn.cd)
+fn.cd <- fn.cd %>%
+           mutate(Category = fct_relevel(Category, c("NDM", "DM", "NMI", "NMO", "NS", "PDR")))
+ggplot(data = fn.cd, aes(x = Category, y = FN_ng.ml.sMP, fill = Category)) +
+ geom_violin(draw_quantiles = c(0.25, 0.5, 0.75), show.legend = FALSE)
+
+## A2M
+colnames(a2m.cd)
+a2m.cd <- a2m.cd %>%
+           mutate(Category = fct_relevel(Category, c("NDM", "DM", "NMI", "NMO", "NS", "PDR")))
+ggplot(data = a2m.cd, aes(x = Category, y = A2M_ng.ml.sMP, fill = Category)) +
+ geom_violin(draw_quantiles = c(0.25, 0.5, 0.75), show.legend = FALSE)
 
 
+```
 
 
+```{r}
+## CORRELATION ANALYSIS
+colnames(cd41.cd)
+cd41.data <- cd41.cd %>%
+           mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "CD41_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(CD41_ng.ml.sMP, .before = "BP-sys")
+
+colnames(fn.cd)
+fn.data <- fn.cd %>%
+           mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "FN_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(FN_ng.ml.sMP, .before = "BP-sys")
+
+colnames(a2m.cd)
+a2m.data <- a2m.cd %>%
+           mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "A2M_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(A2M_ng.ml.sMP, .before = "BP-sys")
+          
+cd41.data
+cd41.corr <- cor(cd41.data)
+corrplot(cd41.corr, method = "circle", type = "lower", diag = FALSE, tl.srt = 45)
+cd41.corr
+
+fn.data
+fn.corr <- cor(fn.data)
+corrplot(fn.corr, method = "circle", type = "lower", diag = FALSE, tl.srt = 45)
+fn.corr
+
+
+a2m.data
+a2m.corr <- cor(a2m.data)
+corrplot(a2m.corr, method = "circle", type = "lower", diag = FALSE, tl.srt = 45)
+```
+
+```{r}
+## Sample Category wise Corrplot
+## CD41 - all blood parameters
+cat <- levels(cd41.cd$Category)
+cat
+for (i in 1:6){
+  cd41.cd %>%
+  filter(Category == cat[i]) %>%
+  mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "CD41_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(CD41_ng.ml.sMP, .before = "BP-sys")  %>%
+          cor() %>%
+          corrplot()
+}
+
+## CD41 - selected blood parameters
+for (i in 1:6){
+  jpeg(paste("CD41-", cat[i], ".jpg"), width = 350, height = 500)
+    cd41.cd %>%
+  filter(Category == cat[i]) %>%
+  mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "ESR", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "CRP_mg.l", "microAlb_mg.l", "CD41_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(CD41_ng.ml.sMP, .before = "BP-sys")  %>%
+          cor() %>%
+          corrplot(method = "circle", type = "lower", diag = FALSE, tl.srt = 45, cl.cex = 0.6)
+   mtext(cat[i])
+    dev.off()
+}
+
+
+## Fibronectin vs all blood parameters
+
+for (i in 1:6){
+  fn.cd %>%
+  filter(Category == cat[i]) %>%
+  mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "FN_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(FN_ng.ml.sMP, .before = "BP-sys")  %>%
+          cor() %>%
+          corrplot()
+}
+
+## Fibronectin vs selected blood parameters
+for (i in 1:6){
+  jpeg(paste("FN-", cat[i], ".jpeg"))
+  a2m.cd %>%
+  filter(Category == cat[i]) %>%
+  mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "A2M_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(A2M_ng.ml.sMP, .before = "TCH")  %>%
+          cor() %>%
+          corrplot(method = "circle", type = "lower", diag = FALSE, tl.srt = 45, cl.cex = 0.7)
+  mtitle(cat[i])
+  dev.off()
+}
+
+
+## A2M  vs all blood parameters
+for (i in 1:6){
+  a2m.cd %>%
+  filter(Category == cat[i]) %>%
+  mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "ESR", "HbA1c", "Glucose_mg.dl", "Urea_mg.dl", "creatinine_mg.dl", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "CRP_mg.l", "microAlb_mg.l", "A2M_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(A2M_ng.ml.sMP, .before = "BP-sys")  %>%
+          cor() %>%
+          corrplot()
+}    
+
+## A2M  vs selected  blood parameters
+for (i in 1:6){
+  jpeg(paste("A2mM - ", cat[i], ".jpeg"))
+  a2m.cd %>%
+  filter(Category == cat[i]) %>%
+  mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
+           select(c("BP-sys", "BP-dia", "HbA1c", "TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "A2M_ng.ml.sMP")) %>%
+           drop_na() %>%
+           relocate(A2M_ng.ml.sMP, .before = "BP-sys")  %>%
+          cor() %>%
+          corrplot(method = "circle", type = "lower", diag = FALSE, tl.srt = 45, cl.cex = 0.7)
+  mtext(cat[i])
+  dev.off()
+}    
+
+```
+
+
+```{r}
+
+colnames(a2m.cd)
+```
 
 
