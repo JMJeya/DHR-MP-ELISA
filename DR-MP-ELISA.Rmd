@@ -10,6 +10,7 @@ library("Hmisc")
 library("corrplot")
 library("caret")
 library("jtools")
+library("moments")
 ```
 
 ```{r}
@@ -359,14 +360,14 @@ for (i in 1:6){
 ## Fibronectin vs selected blood parameters
 for (i in 1:6){
   jpeg(paste("FN-", cat[i], ".jpeg"))
-  a2m.cd %>%
+  fn.cd %>%
   filter(Category == cat[i]) %>%
   mutate_at(vars(starts_with("BP-")), funs(as.numeric)) %>%
-           select(c("TCH", "TC_mg.dl", "HDL_mg.dl", "LDL_mg.dl", "VLDL_mg.dl", "TCH.HDLratio", "LDL.HDLratio", "A2M_ng.ml.sMP")) %>%
+           select(c("BP-sys", "BP-dia", "ESR", "TCH", "TC_mg.dl",  "TCH.HDLratio", "LDL.HDLratio",  "microAlb_mg.l", "FN_ng.ml.sMP")) %>%
            drop_na() %>%
-           relocate(A2M_ng.ml.sMP, .before = "TCH")  %>%
+           relocate(FN_ng.ml.sMP, .before = "BP-sys")  %>%
           cor() %>%
-          corrplot(method = "circle", type = "lower", diag = FALSE, tl.srt = 45, cl.cex = 0.7)
+          corrplot(method = "circle", type = "lower", diag = FALSE, tl.srt = 45, cl.cex = 0.6)
   mtitle(cat[i])
   dev.off()
 }
@@ -403,8 +404,18 @@ for (i in 1:6){
 
 
 ```{r}
+d <- cd41.cd %>%
+  drop_na() 
+plot(density(d$CD41_ng.ml.sMP))
 
-colnames(a2m.cd)
+
+ggplot(data = d, aes(x = CD41_ng.ml.sMP, fill = Category)) +
+  geom_density(alpha = 0.3)
+
+ggplot(data = d, aes(x = CD41_ng.ml.sMP)) +
+  geom_density() +
+  facet_wrap(~Category)
 ```
+
 
 
